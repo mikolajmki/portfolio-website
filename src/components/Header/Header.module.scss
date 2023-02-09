@@ -1,0 +1,51 @@
+@import '../../styles/constants.scss';
+
+.wrapper {
+    position: relative;
+    z-index: 99;
+    opacity: 1;
+    transform: none;
+    position: sticky;
+    top: 0;
+    transition: all 300ms ease;
+
+    
+    .container {
+        position: relative;
+        justify-content: space-between;
+        font-weight: 500;
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1rem;
+            gap: 1.5rem;
+            cursor: pointer;
+
+            li {
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $secondary;
+                }
+            }
+
+            svg {
+                color: $secondary;
+            }
+        }
+    }
+}
