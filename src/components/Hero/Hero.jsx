@@ -58,7 +58,6 @@ export const Hero = () => {
                     </motion.div>
                 </div>
             </motion.div>
-            Hero
         </section>
     )
 }
