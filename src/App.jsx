@@ -3,6 +3,8 @@ import { Hero } from "./components/Hero/Hero";
 import { Experties } from "./components/Experties/Experties";
 import css from '../src/styles/app.module.scss';
 import { Works } from "./components/Works/Works";
+import { Portfolio } from "./components/Portfolio/Portfolio";
+import { People } from "./components/People/People";
 
 const App = () => {
   //don't forget to add font link in index.html
@@ -12,6 +14,8 @@ const App = () => {
       <Hero/>
       <Experties/>
       <Works/>
+      <Portfolio/>
+      <People/>
     </div>
   );
 };

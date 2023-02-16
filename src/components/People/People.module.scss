@@ -1,0 +1,75 @@
+@import '../../styles/constants.scss';
+
+.wrapper {
+
+    .container {
+
+        .heading {
+            flex-direction: column;
+
+            p {
+                list-style: 30px;
+            }
+        }
+
+        .comments {
+
+            .slider :global {
+                .slick-list {
+                    margin: 0 -7px;
+                    box-sizing: initial;
+                    padding: 80px 0px;
+                    overflow-y: visible;
+
+                    & .slick-slide > div {
+                        padding: 0 20px;
+                    }
+
+                    & .slick-slide .slick-active .slick-current + .slick-slide {
+                        @media (min-width: $lg) {
+                            transition: all 1000ms ease-out;
+                            scale: 1.1;
+                            transform: translateY(-30px);
+                        }
+                    }
+                }
+            }
+
+            .comment {
+                box-shadow: rgb(0 0 0 / 5%) -3px 11px 13px 0px;
+                padding: 2rem;
+                display: flex!important;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+                background-color: #2C3639;
+                border-radius: 2px;
+                position: relative;
+
+                > img {
+                    flex: 1;
+                    margin: auto;
+                    border-radius: 50%;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    position: absolute;
+                    top: -2rem;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+                }
+                > p {
+                    flex: 1;
+                }
+                > .bio {
+                    flex: 1;
+                }
+            }
+            .slider {
+                > ul > li > button::before {
+                    color: white;
+
+                }
+            }
+        }
+    }
+}
