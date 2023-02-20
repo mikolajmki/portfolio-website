@@ -2,7 +2,7 @@
 
 .container {
     overflow-x: clip;
+    max-width: 100%;
     position: relative;
     color: $primary;
-    overflow-y: hidden;
 }
