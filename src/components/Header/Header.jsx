@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import css from './Header.module.scss';
 import { BiMenuAltRight, BiPhoneCall } from 'react-icons/bi';
 import { motion } from 'framer-motion';
@@ -17,6 +17,10 @@ export const Header = () => {
         menuRef,
         setMenuOpened
     });
+
+    useEffect(() => {
+        console.log(menuOpened)
+    }, [menuOpened])
 
     const phoneHandler = () => {
         navigator.clipboard.writeText("+48883025755");
@@ -50,7 +54,7 @@ export const Header = () => {
                     <BiPhoneCall onClick={phoneHandler} size={'40px'}/>
                 </ul>
 
-                <div className={css.menuIcon} onClick={() => setMenuOpened((prev) => !prev)}>
+                <div className={css.menuIcon} onClick={ () => setMenuOpened(true) }>
                     <BiMenuAltRight size={30}/>
                 </div>
             </div>
