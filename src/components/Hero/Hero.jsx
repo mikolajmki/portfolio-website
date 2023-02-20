@@ -2,12 +2,21 @@ import React from "react";
 import css from './Hero.module.scss';
 import {motion} from 'framer-motion';
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
-
+import { toast, Toaster } from "react-hot-toast";
 
 export const Hero = () => {
-    const email = "mikol4m@gmail.com"
+    const email = "mikol4m@gmail.com";
+
+    const emailHandler = () => {
+        navigator.clipboard.writeText(email);
+        toast.success('E-mail address copied to clipboard!', {
+            id: 'copy'
+        });
+    }
+
     return (
         <section className={`paddings ${css.wrapper}`}>
+            <Toaster position="top-center"/>
             <motion.div 
             variants={staggerContainer}
             initial="hidden"
@@ -37,7 +46,7 @@ export const Hero = () => {
                 <motion.div 
                 variants={fadeIn('right', 'tween', 0.4, 1.5)}
                 className={css.email}>
-                    <a href={`mailto:${email}`}>{email}</a>
+                    <a onClick={emailHandler}>{email}</a>
                 </motion.div>
 
                 <div className={css.lowerElements}>

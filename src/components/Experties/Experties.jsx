@@ -12,6 +12,7 @@ export const Experties = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`paddings ${css.wrapper}`}>
+            <a className="anchor" id="experties"></a>
             <div className={`yPaddings flexCenter innerWidth ${css.container}`}>
                  
                  <div className={css.leftSide}>

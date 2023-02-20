@@ -1,6 +1,9 @@
 @import '../../styles/constants.scss';
 
 .wrapper {
+    @media (max-width: $sm), (max-width: $md) {
+        width: 100vw;
+    }
     position: relative;
     z-index: 99;
     opacity: 1;

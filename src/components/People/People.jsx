@@ -1,7 +1,7 @@
 import React from "react";
 import css from './People.module.scss';
 import { motion } from "framer-motion";
-import { staggerChildren } from "../../utils/motion";
+import { footerVariants, staggerChildren } from "../../utils/motion";
 import { comments, sliderSettings } from "../../utils/data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,7 +15,10 @@ export const People = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`paddings ${css.wrapper}`}>
-            <div className={`yPaddings innerWidth ${css.container}`}>
+            <a className="anchor" id="people"></a>
+            <motion.div 
+            variants={footerVariants}
+            className={`yPaddings innerWidth ${css.container}`}>
                 
                 <div className={`flexCenter ${css.heading}`}>
 
@@ -43,7 +46,7 @@ export const People = () => {
                     </Slider>
                 </div>
 
-            </div>
+            </motion.div>
         </motion.section>
     )
 }

@@ -96,11 +96,13 @@
 
             a {
                 color: $secondary;
+                text-decoration: underline;
             }
 
             position: absolute;
             top: 50%;
             left: 0;
+            cursor: pointer;
         }
     }
 }

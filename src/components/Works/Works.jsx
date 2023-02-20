@@ -14,6 +14,7 @@ export const Works = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`paddings ${css.wrapper}`}>
             
+            <a className="anchor" id="work"></a>
             <div className={`flexCenter innerWidth ${css.container}`}>
                 <span className="primaryText yPaddings">My Work Experience</span>
 
