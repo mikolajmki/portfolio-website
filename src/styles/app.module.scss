@@ -1,8 +1,12 @@
 @import '../styles/constants.scss';
 
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 .container {
     overflow-x: clip;
-    max-width: 100%;
     position: relative;
     color: $primary;
 }
