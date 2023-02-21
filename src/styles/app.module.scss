@@ -1,6 +1,10 @@
 @import '../styles/constants.scss';
 
 html, body {
+    overflow-x: hidden;
+}
+
+body {
     max-width: 100%;
 }
 
